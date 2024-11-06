@@ -2,7 +2,7 @@
 
 ## Início 🏠
 
-Esta API permite gerenciar entidades de `Produto` e `Cliente`, com operações de criação, leitura, atualização e exclusão (CRUD). Ela foi desenvolvida em duas partes:
+Esta API permite gerenciar entidades de `Produto` e `Cliente`, com operações de criação, leitura, atualização e exclusão (CRUD), além de outras opções como buscas por nome e preço. Ela foi desenvolvida em duas partes:
 - **BackEnd**: Desenvolvido utilizando Framework SpringBoot em Java.
 - **FrontEnd**: Desenvolvido utilizando Html, Css, JavaScript (Para realizar as requisições), e para a estilização, Bootstrap 5.
 
