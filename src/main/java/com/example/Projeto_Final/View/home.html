@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relatório de Participação</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css" rel="stylesheet">
+    <style>
+        .nav-link:hover{
+            background-color: rgb(226, 226, 226)!important;
+        }
+    </style>
+</head>
+<body>
+    <div class="d-flex">
+        <div class="bg-light border-end" style="width: 250px; height: 100vh;">
+            <nav class="nav flex-column fw-medium">
+                <h4 class="border-bottom p-1 pb-3 mx-2">Navegação</h4>
+                <a href="home.html" class="nav-link text-dark" style="background-color: rgb(226, 226, 226)!important;"><i class="bi bi-info-circle me-2"></i> Info</a>
+                <a href="pages/produtos.html" class="nav-link text-dark"><i class="bi bi-box me-2"></i> Produtos</a>
+                <a href="pages/clientes.html" class="nav-link text-dark"><i class="bi bi-person me-2"></i> Clientes</a>
+            </nav>
+        </div>
+
+        <!-- Main Content -->
+        <div class="container-fluid p-4">
+            <div class="card mb-4 bg-warning-subtle text-warning-emphasis">
+                <div class="card-body">
+                    <h5 class="card-title"><i class="bi bi-info-circle me-2"></i> Projeto de API com Spring - Gestão de Clientes e Produtos</h5>
+                    <p><strong>No que consiste?</strong><br> Este projeto consiste em uma API desenvolvida em Java utilizando o framework Spring Boot, que permite o gerenciamento de clientes e produtos. A API oferece funcionalidades completas de CRUD (Create, Read, Update, Delete), além de várias opções de busca para facilitar o acesso aos dados de clientes e produtos.</p>
+                    <p><strong>Funcionalidades</strong><br>
+                        <ul>
+                            <li>
+                                <h6>Cliente</h6>
+                                Cadastrar Cliente, Buscar Todos os Clientes, Buscar Cliente por Código, Buscar Clientes por Parte Inicial do Nome, Buscar Clientes pelo E-mail, Buscar Clientes por Combinação de Nome e E-mail Remover Cliente (Pelo registro completo ou Pelo código), Atualizar Cliente
+                            </li>
+                            <li>
+                                <h6>Produtos</h6>
+                                Cadastrar Produto, Buscar Todos os Produtos, Buscar Produto por Código, Buscar Produtos por Parte Inicial da Descrição, Buscar Produtos por Preço Inferior a um Valor, Buscar Produtos por Marca, Buscar Produtos por Combinação de Marca e Preço, Remover Produto (Pelo registro completo ou Pelo código), Atualizar Produto
+                            </li>
+                        </ul> 
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-light border-top text-center py-3" style="position: fixed; bottom: 0; width: 100%;">
+        <span class="fw-medium">Desenvolvido por Joseph Santos © 2024</span>
+        <a href="https://github.com/seu_usuario" target="_blank" class="text-dark ms-3"><i class="bi bi-github"></i></a>
+        <a href="https://linkedin.com/in/seu_usuario" target="_blank" class="text-dark ms-3"><i class="bi bi-linkedin"></i></a>
+    </footer>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.4.2/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>

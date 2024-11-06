@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Produtos</title>
+      <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css" rel="stylesheet"/>
+      <link rel="stylesheet" href="../css/clientesStyles.css">
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous"/>
+   </head>
+   <body>
+      <div class="modal fade" id="editar" tabindex="-1" aria-labelledby="editarModalLabel" aria-hidden="true">
+         <div class="modal-dialog">
+            <div class="modal-content">
+               <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="editarLabel">Editar</h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+               </div>
+               <div class="modal-body">
+                  <form id="frmEditarCliente">
+                     <label for="codigo_edit">Codigo</label>
+                     <input type="number" id="codigo_edit" class="form-control" />
+                     <label for="nome_edit">Nome</label>
+                     <input type="text" id="nome_edit" class="form-control" />
+                     <label for="email_edit">Email</label>
+                     <input type="email" class="form-control mb-4" id="email_edit" />
+                     <button type="submit" class="btn btn-dark mt-2">Editar Cliente</button>
+                  </form>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="modal fade" id="excluir" tabindex="-1" aria-labelledby="excluirModalLabel" aria-hidden="true">
+         <div class="modal-dialog">
+            <div class="modal-content">
+               <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="excluirLabel">Remover</h1>
+                  <button type="button"class="btn-close"data-bs-dismiss="modal"aria-label="Close"></button>
+               </div>
+               <div class="modal-body">
+                  <form id="frmExcluirCliente">
+                     <label for="codigo_remove">Codigo</label>
+                     <input type="number" id="codigo_remove" class="form-control" />
+                     <button class="mt-4 btn btn-dark" type="submit">Excluir</button>
+                  </form>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="modal fade" id="buscar" tabindex="-1" aria-labelledby="buscarModalLabel" aria-hidden="true">
+         <div class="modal-dialog">
+            <div class="modal-content">
+               <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="buscarLabel">Buscar</h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+               </div>
+               <div class="modal-body">
+                    <form id="frmBuscarCliente">
+                        <label for="nome_busca">Nome</label>
+                        <input id="nome_busca" class="form-control" type="text">
+                        <button type="submit" class="btn btn-dark mt-2">Buscar</button>
+                    </form>
+                  <div class="container mt-1">
+                     <table class="table">
+                        <thead>
+                           <tr>
+                              <th scope="col">Codigo</th>
+                              <th scope="col">Nome</th>
+                              <th scope="col">Email</th>
+                           </tr>
+                        </thead>
+                        <tbody id="buscarTableBody">
+                           <tr>
+                              <td colspan="3">
+                                 <div class="d-flex justify-content-center">
+                                    <div class="spinner-border text-center" role="status" style="width: 30px; height: 30px">
+                                       <span class="visually-hidden">Loading...</span>
+                                    </div>
+                                 </div>
+                              </td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+
+      <div class="d-flex">
+         <div class="bg-light border-end" style="width: 250px; height: auto; min-height: 100vh">
+            <nav class="nav flex-column fw-medium">
+               <h4 class="border-bottom p-1 pb-3 mx-2">Navegação</h4>
+               <a href="../home.html" class="nav-link text-dark"><i class="bi bi-info-circle me-2"></i> Info</a>
+               <a href="../pages/produtos.html" class="nav-link text-dark"><i class="bi bi-box me-2"></i> Produtos</a>
+               <a href="../pages/clientes.html" class="nav-link text-dark" style="background-color: rgb(226, 226, 226) !important;"><i class="bi bi-person me-2"></i> Clientes</a>
+            </nav>
+         </div>
+
+         <div class="container-fluid mt-4">
+            <div class="row mb-3">
+               <h4>Clientes</h4>
+               <div class="col-md-9 border-end">
+                  <form id="frmAdicionarCliente" class="p-3 rounded rounded-3 ml-mr">
+                     <h5>Adicionar clientes</h5>
+                     <label for="codigo">Codigo</label>
+                     <input type="number" id="codigo" class="form-control" />
+                     <label for="nome">Nome</label>
+                     <input type="text" id="nome" class="form-control">
+                     <label for="email">Email</label>
+                     <input type="email" id="email" class="form-control" />
+                     <button type="submit" class="btn btn-dark w-100 mt-3">Enviar</button>
+                  </form>
+               </div>
+               <div class="col-md-3">
+                  <h4>Outras opções</h4>
+                  <div class="row">
+                     <div class="col">
+                        <button type="button" class="btn btn-dark mb-2 w-100" data-bs-toggle="modal" data-bs-target="#editar">
+                        Editar cliente
+                        </button>
+                        <button type="button" class="btn btn-dark mb-2 w-100" data-bs-toggle="modal" data-bs-target="#excluir">
+                        Remover clientes
+                        </button>
+                        <button type="button" class="btn btn-dark mb-2 w-100" data-bs-toggle="modal" data-bs-target="#buscar">
+                        Buscar clientes
+                        </button>
+                     </div>
+                  </div>
+                  <div class="row">
+                     <div class="col">
+                        <button type="button" class="btn btn-dark mb-2 w-100" onclick="fetchClients();">Atualizar tabela</button>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <table class="table">
+               <thead>
+                  <tr>
+                     <th scope="col">Codigo</th>
+                     <th scope="col">Nome</th>
+                     <th scope="col">Email</th>
+                  </tr>
+               </thead>
+               <tbody id="productTableBody">
+                  <tr>
+                     <td colspan="3">
+                        <div class="d-flex justify-content-center">
+                           <div class="spinner-border text-center" role="status" style="width: 30px; height: 30px">
+                              <span class="visually-hidden">Loading...</span>
+                           </div>
+                        </div>
+                     </td>
+                  </tr>
+               </tbody>
+            </table>
+         </div>
+      </div>
+      <!-- Footer -->
+      <footer class="bg-light border-top text-center py-3" style="position: fixed; bottom: 0; width: 100%">
+         <span class="fw-medium">Desenvolvido por Joseph Santos © 2024</span>
+         <a href="https://github.com/seu_usuario" target="_blank" class="text-dark ms-3"><i class="bi bi-github"></i></a>
+         <a href="https://linkedin.com/in/seu_usuario" target="_blank" class="text-dark ms-3"><i class="bi bi-linkedin"></i></a>
+      </footer>
+
+      <script src="../js/appClientes.js"></script>
+      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.4.2/dist/umd/popper.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"crossorigin="anonymous"></script>
+   </body>
+</html>
