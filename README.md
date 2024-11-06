@@ -80,22 +80,30 @@ Esta API permite gerenciar entidades de `Produto` e `Cliente`, com operações d
     "marca": "Marca Exemplo"
   }
 
+---
+
 #### 2. Listar Todos os Produtos
 - **Descrição**: Retorna uma lista de todos os produtos cadastrados.
 - **Método:** GET
 - **Endpoint:** `/produto/find/all`
+
+---
   
 #### 3. Buscar Produto por Código
 - **Descrição:** Retorna o produto correspondente ao código fornecido.
 - **Método:** GET
 - **Endpoint:** `/produto/find/id/{codigo}`
 - **Parâmetros:** `codigo` Código do produto (int)
+
+---
   
 #### 4. Buscar Produtos por Início da Descrição
 - **Descrição:** Retorna produtos cuja descrição começa com o valor especificado.
 - **Método:** GET
 - **Endpoint:** `/produto/find/description/starts/{desc}`
 - **Parâmetros:** `desc` Texto inicial da descrição (String)
+
+---
   
 #### 5. Buscar Produtos com Preço Inferior ao Valor Especificado
 - **Descrição:** Retorna produtos com preço menor que o valor fornecido.
@@ -103,17 +111,23 @@ Esta API permite gerenciar entidades de `Produto` e `Cliente`, com operações d
 - **Endpoint:** `/produto/find/price/less/{price}`
 - **Parâmetros:** `price` Limite de preço (double)
 
+---
+
 #### 6. Buscar Produtos por Marca
 - **Descrição:** Retorna produtos de uma marca específica.
 - **Método:** GET
 - **Endpoint:** `/produto/find/marca/{marca}`
 - **Parâmetros:** `marca` Nome da marca (String)
+
+---
   
 #### 7. Buscar Produtos por Descrição Contendo Texto e Preço Inferior ao Valor
 - **Descrição:** Retorna produtos cuja descrição contém um texto específico e que tenham preço menor que o valor especificado.
 - **Método:** GET
 - **Endpoint:** `/produto/find/description/contains/{desc}/less/{price}`
 - **Parâmetros:** `desc` Texto contido na descrição (String), `price` Limite de preço (double)
+
+---
 
 #### 8. Remover Produto
 - **Descrição:** Remove um produto específico do banco de dados.
@@ -129,11 +143,15 @@ Esta API permite gerenciar entidades de `Produto` e `Cliente`, com operações d
     "marca": "Marca Exemplo"
   }
 
+---
+
 #### 9. Remover Produto por Código
 - **Descrição:** Remove um produto específico pelo código.
 - **Método:** DELETE
 - **Endpoint:** `/produto/remove/{codigo}`
 - **Parâmetros:** `codigo` Código do produto (int)
+
+---
 
 #### 10. Atualizar Produto
 - **Descrição:** Atualiza os dados de um produto existente.
@@ -163,10 +181,14 @@ Esta API permite gerenciar entidades de `Produto` e `Cliente`, com operações d
      "telefone": "123456789"
    }
 
+---
+
 ### 2. Listar Todos os Clientes
 - **Descrição:** Retorna uma lista de todos os clientes cadastrados.
 - **Método:** GET
 - **Endpoint:** `/cliente/find/all`
+
+---
 
 ### 3. Buscar Cliente por Código
 - **Descrição:** Retorna o cliente correspondente ao código fornecido.
@@ -174,11 +196,15 @@ Esta API permite gerenciar entidades de `Produto` e `Cliente`, com operações d
 - **Endpoint:** `/cliente/find/id/{codigo}`
 - **Parâmetros:** `codigo` Código do cliente (int)
 
+---
+
 ### 4. Buscar Clientes pelo Início do Nome
 - **Descrição:** Retorna clientes cujo nome começa com o valor especificado.
 - **Método:** GET
 - **Endpoint:** `/cliente/find/name/init/{nome}`
 - **Parâmetros:** `nome` Texto inicial do nome (String)
+
+---
 
 ### 5. Buscar Clientes por Email
 - **Descrição:** Retorna clientes com o email especificado.
@@ -186,11 +212,15 @@ Esta API permite gerenciar entidades de `Produto` e `Cliente`, com operações d
 - **Endpoint:** `/cliente/find/email/{email}`
 - **Parâmetros:** `email` Endereço de email (String)
 
+---
+
 ### 6. Buscar Clientes por Nome e Email
 - **Descrição:** Retorna clientes cujo nome e email correspondem aos valores fornecidos.
 - **Método:** GET
 - **Endpoint:** `/cliente/find/name/{nome}/email/{email}`
 - **Parâmetros:** `nome` Nome do cliente (String), `email` Email do cliente (String)
+
+---
 
 ### 7. Remover Cliente
 - **Descrição:** Remove um cliente específico do banco de dados.
@@ -204,11 +234,15 @@ Esta API permite gerenciar entidades de `Produto` e `Cliente`, com operações d
      "email": "cliente@exemplo.com",
    }
 
+---
+
 ### 8. Remover Cliente por Código
 - **Descrição:** Remove um cliente específico pelo código.
 - **Método:** DELETE
 - **Endpoint:** `/cliente/remove/{codigo}`
 - **Parâmetros:** `codigo` Código do cliente (int)
+
+---
   
 ### 9. Atualizar Cliente
 - **Descrição:** Atualiza os dados de um cliente existente.
@@ -222,6 +256,8 @@ Esta API permite gerenciar entidades de `Produto` e `Cliente`, com operações d
       "email": "novoemail@exemplo.com",
       "telefone": "987654321"
     }
+
+---
 
 ## Observações
 - A API utiliza @CrossOrigin para permitir requisições de diferentes origens.
@@ -237,4 +273,5 @@ Esta API permite gerenciar entidades de `Produto` e `Cliente`, com operações d
 ### REST Controller: 
 - Para exposição dos endpoints RESTful.
 
-- [Voltar ao Início](#inicio)
+
+[Voltar ao Início](#início-)
