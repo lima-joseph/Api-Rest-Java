@@ -74,7 +74,6 @@ Esta API permite gerenciar entidades de `Produto` e `Cliente`, com operações d
   ```json
   {
     "codigo": 1,
-    "nome": "Produto Exemplo",
     "descricao": "Descrição do produto",
     "preco": 100.0,
     "marca": "Marca Exemplo"
@@ -137,7 +136,6 @@ Esta API permite gerenciar entidades de `Produto` e `Cliente`, com operações d
   ```json
   {
     "codigo": 1,
-    "nome": "Produto Exemplo",
     "descricao": "Descrição do produto",
     "preco": 100.0,
     "marca": "Marca Exemplo"
@@ -161,7 +159,6 @@ Esta API permite gerenciar entidades de `Produto` e `Cliente`, com operações d
 - **Corpo da Requisição:**
   ```json
   {
-    "nome": "Novo Nome",
     "descricao": "Nova Descrição",
     "preco": 150.0,
     "marca": "Nova Marca"
@@ -178,7 +175,6 @@ Esta API permite gerenciar entidades de `Produto` e `Cliente`, com operações d
      "codigo": 1,
      "nome": "Cliente Exemplo",
      "email": "cliente@exemplo.com",
-     "telefone": "123456789"
    }
 
 ---
@@ -254,7 +250,6 @@ Esta API permite gerenciar entidades de `Produto` e `Cliente`, com operações d
    {
       "nome": "Novo Nome",
       "email": "novoemail@exemplo.com",
-      "telefone": "987654321"
     }
 
 ---
