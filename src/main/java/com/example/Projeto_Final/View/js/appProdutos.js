@@ -236,6 +236,6 @@ function addProduct(event) {
     
     document.getElementById("codigo_edit").addEventListener("blur", buscarProdutoPorId);
     document.getElementById("frmEditarProduto").addEventListener("submit", editarProduto);
-    document.getElementById("frmBuscarProduto").addEventListener("submit", buscarProdutoPorDescricao);
-    document.getElementById("frmAdicionarProducto").addEventListener("submit", addProduct);
-    document.getElementById("frmExcluiProduto").addEventListener("submit", removeProduct);
+    document.getElementById("frmBuscarProduto").addEventListener("click", buscarProdutoPorDescricao);
+    document.getElementById("frmAdicionarProduto").addEventListener("submit", addProduct);
+    document.getElementById("frmExcluirProduto").addEventListener("submit", removeProduct);
